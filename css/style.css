@@ -31,15 +31,17 @@
   --font-main: 'Montserrat', sans-serif;
   --font-serif: 'Cormorant Garamond', serif;
 
-  --radius-sm: 8px;
+  /* Border radius — TodoOficio style: cards more rounded, buttons rectangular */
+  --radius-sm: 10px;
   --radius-md: 16px;
-  --radius-lg: 24px;
+  --radius-lg: 20px;
   --radius-xl: 40px;
+  --radius-btn: 12px;
 
   --shadow-glow-purple: 0 0 40px rgba(124, 58, 237, 0.4);
   --shadow-glow-gold: 0 0 40px rgba(245, 158, 11, 0.4);
-  --shadow-card: 0 4px 24px rgba(0,0,0,0.4);
-  --shadow-card-hover: 0 12px 48px rgba(124, 58, 237, 0.25);
+  --shadow-card: 0 8px 32px rgba(0,0,0,0.5);
+  --shadow-card-hover: 0 20px 60px rgba(124, 58, 237, 0.3);
 
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -126,7 +128,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 #navbar.scrolled {
-  background: rgba(7, 7, 15, 0.92);
+  background: rgba(7, 7, 15, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   padding: 0.75rem 0;
@@ -160,17 +162,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .logo-main {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-text-muted);
 }
 
 .logo-sub {
   font-size: 1.2rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+  font-weight: 900;
+  letter-spacing: 0.02em;
   color: var(--color-text);
 }
 
@@ -182,9 +184,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .nav-link {
   padding: 0.5rem 0.75rem;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-text-muted);
   border-radius: var(--radius-sm);
@@ -198,8 +200,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .nav-cta {
   background: var(--gradient-primary) !important;
   color: white !important;
-  padding: 0.5rem 1.2rem !important;
+  padding: 0.5rem 1.25rem !important;
   border-radius: var(--radius-xl) !important;
+  font-weight: 800 !important;
   box-shadow: 0 0 20px rgba(124,58,237,0.4);
 }
 
@@ -219,7 +222,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: 0.5rem;
-  min-width: 200px;
+  min-width: 210px;
   opacity: 0; visibility: hidden;
   transition: var(--transition);
   box-shadow: var(--shadow-card);
@@ -231,8 +234,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .dropdown-menu li a {
-  display: block; padding: 0.6rem 1rem;
-  font-size: 0.82rem; font-weight: 600;
+  display: block; padding: 0.65rem 1rem;
+  font-size: 0.8rem; font-weight: 700;
   color: var(--color-text-muted);
   border-radius: var(--radius-sm);
   text-transform: uppercase; letter-spacing: 0.04em;
@@ -308,11 +311,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background: rgba(124, 58, 237, 0.15);
   border: 1px solid rgba(124, 58, 237, 0.4);
   color: var(--color-primary-light);
-  font-size: 0.78rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 0.4rem 1.2rem;
+  padding: 0.45rem 1.2rem;
   border-radius: var(--radius-xl);
   margin-bottom: 1.5rem;
 }
@@ -322,7 +325,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 900;
   line-height: 1.05;
   margin-bottom: 1.5rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .gradient-text {
@@ -338,6 +341,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--color-text-muted);
   font-style: italic;
   margin-bottom: 2.5rem;
+  line-height: 1.6;
 }
 
 .hero-schedule {
@@ -359,6 +363,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .schedule-card:hover {
   border-color: var(--color-border-hover);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
 }
 
 .schedule-icon { font-size: 1.5rem; }
@@ -373,7 +378,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .schedule-card small {
   font-size: 0.75rem;
   color: var(--color-text-muted);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.04em;
 }
 
@@ -392,7 +397,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
   color: var(--color-text-faint);
-  font-size: 0.7rem; font-weight: 600;
+  font-size: 0.7rem; font-weight: 700;
   letter-spacing: 0.15em; text-transform: uppercase;
   animation: bounce-hint 2s ease-in-out infinite;
 }
@@ -407,15 +412,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   50% { transform: translateX(-50%) translateY(6px); }
 }
 
-/* === BUTTONS === */
+/* === BUTTONS — TodoOficio style: border-radius: 12px para CTAs === */
 .btn {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  padding: 0.85rem 2rem;
-  font-size: 0.85rem;
-  font-weight: 700;
+  padding: 0.9rem 2rem;
+  font-size: 0.88rem;
+  font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-btn);
   transition: var(--transition);
   cursor: pointer;
   white-space: nowrap;
@@ -429,13 +434,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.55);
+  box-shadow: 0 10px 35px rgba(124, 58, 237, 0.55);
+  color: white;
 }
 
 .btn-ghost {
   background: transparent;
   color: var(--color-text);
-  border: 1.5px solid var(--color-border-hover);
+  border: 2px solid var(--color-border-hover);
 }
 
 .btn-ghost:hover {
@@ -447,7 +453,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .btn-outline {
   background: transparent;
   color: var(--color-primary-light);
-  border: 1.5px solid var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
 .btn-outline:hover {
@@ -499,9 +505,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .stat-item p {
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-text-muted);
   margin-top: 0.5rem;
@@ -517,9 +523,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .section-tag {
   display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--color-primary-light);
   margin-bottom: 0.75rem;
@@ -528,7 +534,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .section-title {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 900;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   line-height: 1.1;
   margin-bottom: 1rem;
 }
@@ -538,6 +544,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--color-text-muted);
   max-width: 540px;
   margin-inline: auto;
+  line-height: 1.7;
 }
 
 /* === NOSOTROS === */
@@ -552,7 +559,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .nosotros-lead {
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-text);
   margin-bottom: 1.25rem;
   line-height: 1.65;
@@ -561,6 +568,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .nosotros-content p {
   color: var(--color-text-muted);
   margin-bottom: 1rem;
+  line-height: 1.75;
 }
 
 .pastors-card {
@@ -568,7 +576,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   padding: 1.25rem;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   margin-top: 2rem;
   transition: var(--transition);
 }
@@ -583,11 +591,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background: var(--gradient-primary);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-weight: 800; font-size: 0.9rem; color: white;
+  font-weight: 900; font-size: 0.9rem; color: white;
   flex-shrink: 0;
 }
 
-.pastors-info strong { display: block; font-size: 0.9rem; font-weight: 700; }
+.pastors-info strong { display: block; font-size: 0.9rem; font-weight: 800; }
 .pastors-info small { font-size: 0.78rem; color: var(--color-text-muted); }
 
 .nosotros-pillars {
@@ -597,14 +605,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .pillar-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  padding: 1.5rem;
-  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  border-radius: var(--radius-lg);
   transition: var(--transition);
 }
 
 .pillar-card:hover {
   border-color: var(--color-primary);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: var(--shadow-card-hover);
 }
 
@@ -612,13 +620,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .pillar-card h3 {
   font-size: 0.9rem;
-  font-weight: 800;
+  font-weight: 900;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
-.pillar-card p { font-size: 0.82rem; color: var(--color-text-muted); }
+.pillar-card p { font-size: 0.83rem; color: var(--color-text-muted); line-height: 1.65; }
 
 /* === HORARIOS === */
 .horarios {
@@ -662,7 +670,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .horario-card:hover::before { transform: scaleX(1); }
 
 .horario-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   border-color: var(--color-primary);
   box-shadow: var(--shadow-card-hover);
 }
@@ -675,9 +683,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .horario-card.featured::before { transform: scaleX(1); }
 
 .horario-day {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--color-primary-light);
   margin-bottom: 0.75rem;
@@ -689,6 +697,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   line-height: 1;
   color: var(--color-text);
   margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
 }
 
 .horario-time span {
@@ -699,20 +708,21 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .horario-label {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
 }
 
-.horario-desc { font-size: 0.83rem; color: var(--color-text-muted); margin-bottom: 1.25rem; }
+.horario-desc { font-size: 0.83rem; color: var(--color-text-muted); margin-bottom: 1.25rem; line-height: 1.65; }
 
 .horario-badge {
   display: inline-block;
   background: rgba(124,58,237,0.15);
   border: 1px solid rgba(124,58,237,0.3);
   color: var(--color-primary-light);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0.3rem 0.9rem;
   border-radius: var(--radius-xl);
@@ -733,8 +743,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .address-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-.horario-address h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem; }
-.address-main { font-size: 1.15rem; font-weight: 700; color: var(--color-text); }
+.horario-address h3 { font-size: 1.1rem; font-weight: 900; margin-bottom: 1rem; }
+.address-main { font-size: 1.15rem; font-weight: 800; color: var(--color-text); }
 .address-city { font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 1.5rem; }
 
 /* === MINISTERIOS === */
@@ -756,8 +766,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .ministerio-tag {
   display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-size: 0.7rem;
+  font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-primary-light);
@@ -785,12 +795,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 
 .ministerio-content p {
   color: var(--color-text-muted);
   margin-bottom: 1.25rem;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 .ministerio-list {
@@ -800,9 +811,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .ministerio-list li {
   font-size: 0.88rem;
   color: var(--color-text-muted);
-  padding: 0.4rem 0;
+  padding: 0.45rem 0;
   border-bottom: 1px solid var(--color-border);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .ministerio-list li:last-child { border-bottom: none; }
@@ -855,7 +866,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .actividad-card {
   background: var(--color-surface-2);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   padding: 2rem;
   transition: var(--transition);
   position: relative;
@@ -874,7 +885,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .actividad-card:hover::after { transform: scaleX(1); }
 
 .actividad-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   border-color: rgba(124,58,237,0.3);
   box-shadow: var(--shadow-card-hover);
 }
@@ -887,26 +898,27 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .actividad-card h3 {
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 900;
   margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
 }
 
 .actividad-card p {
   font-size: 0.85rem;
   color: var(--color-text-muted);
   margin-bottom: 1.25rem;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .link-arrow {
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.06em;
   color: var(--color-primary-light);
   transition: var(--transition);
 }
 
-.link-arrow:hover { letter-spacing: 0.1em; }
+.link-arrow:hover { letter-spacing: 0.12em; }
 
 /* === PODCAST === */
 .podcast {
@@ -960,11 +972,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .podcast-featured h3 {
   font-size: 1.8rem; font-weight: 900;
   margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 
 .podcast-featured p {
   color: var(--color-text-muted);
   margin-bottom: 1.5rem;
+  line-height: 1.75;
 }
 
 .podcast-platforms {
@@ -978,7 +992,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding: 0.4rem 1rem;
   border-radius: var(--radius-xl);
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
   transition: var(--transition);
 }
 
@@ -1001,17 +1015,18 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .episode-card:hover {
   border-color: var(--color-primary);
   transform: translateX(4px);
+  box-shadow: var(--shadow-card);
 }
 
 .episode-num {
-  font-size: 0.7rem; font-weight: 800;
+  font-size: 0.7rem; font-weight: 900;
   color: var(--color-primary-light);
   letter-spacing: 0.1em;
   min-width: 28px;
 }
 
 .episode-info { flex: 1; }
-.episode-info strong { display: block; font-size: 0.88rem; font-weight: 700; margin-bottom: 0.2rem; }
+.episode-info strong { display: block; font-size: 0.88rem; font-weight: 800; margin-bottom: 0.2rem; }
 .episode-info small { font-size: 0.75rem; color: var(--color-text-muted); }
 
 .play-btn {
@@ -1040,14 +1055,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .taller-card {
   background: var(--color-surface-2);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   padding: 1.75rem;
   transition: var(--transition);
   display: flex; flex-direction: column;
 }
 
 .taller-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   border-color: rgba(124,58,237,0.4);
   box-shadow: var(--shadow-card-hover);
 }
@@ -1060,8 +1075,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .taller-icon { font-size: 2rem; }
 
 .taller-category {
-  font-size: 0.68rem;
-  font-weight: 700;
+  font-size: 0.66rem;
+  font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-primary-light);
@@ -1071,8 +1086,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-radius: var(--radius-xl);
 }
 
-.taller-card h3 { font-size: 0.95rem; font-weight: 800; margin-bottom: 0.75rem; }
-.taller-card p { font-size: 0.82rem; color: var(--color-text-muted); flex: 1; margin-bottom: 1.25rem; }
+.taller-card h3 { font-size: 0.95rem; font-weight: 900; margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+.taller-card p { font-size: 0.82rem; color: var(--color-text-muted); flex: 1; margin-bottom: 1.25rem; line-height: 1.65; }
 
 .taller-footer {
   display: flex; align-items: center; justify-content: space-between;
@@ -1081,10 +1096,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .taller-format {
-  font-size: 0.72rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 700;
   color: var(--color-text-faint);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -1130,7 +1145,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: 0.9rem;
   color: var(--color-primary-light);
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.08em;
 }
 
@@ -1162,7 +1177,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   flex-shrink: 0;
 }
 
-.contact-item strong { display: block; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.25rem; }
+.contact-item strong {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
 .contact-item p { font-size: 0.9rem; color: var(--color-text-muted); }
 .contact-item a:hover { color: var(--color-primary-light); }
 
@@ -1175,9 +1197,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .horarios-resumen h4 {
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-primary-light);
   margin-bottom: 1rem;
@@ -1191,7 +1213,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .horario-item:last-child { border-bottom: none; }
-.horario-item .dia { font-weight: 700; }
+.horario-item .dia { font-weight: 800; }
 .horario-item .hora { color: var(--color-text-muted); }
 
 /* Contact Form */
@@ -1208,9 +1230,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .form-group label {
   display: block;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-text-muted);
   margin-bottom: 0.5rem;
@@ -1226,7 +1248,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--color-text);
   font-family: var(--font-main);
   font-size: 0.9rem;
-  padding: 0.85rem 1rem;
+  font-weight: 500;
+  padding: 0.9rem 1rem;
   outline: none;
   transition: var(--transition);
   -webkit-appearance: none;
@@ -1256,7 +1279,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-radius: var(--radius-sm);
   color: var(--color-accent-green);
   font-size: 0.88rem;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -1284,7 +1307,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: 0.85rem;
   color: var(--color-text-muted);
   margin-bottom: 1.5rem;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .footer-social { display: flex; gap: 0.75rem; }
@@ -1295,7 +1318,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   display: flex; align-items: center; justify-content: center;
-  font-size: 0.85rem; font-weight: 800;
+  font-size: 0.85rem; font-weight: 900;
   color: var(--color-text-muted);
   transition: var(--transition);
   text-transform: uppercase;
@@ -1306,12 +1329,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-color: var(--color-primary);
   color: white;
   transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(124,58,237,0.4);
 }
 
 .footer-links h4 {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-text-muted);
   margin-bottom: 1.25rem;
