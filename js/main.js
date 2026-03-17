@@ -31,6 +31,7 @@
 (function initHamburger() {
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('nav-menu');
+  const navbar = document.getElementById('navbar');
   if (!hamburger || !navMenu) return;
 
   hamburger.addEventListener('click', () => {
