@@ -272,3 +272,64 @@
     });
   });
 })();
+
+/* === PHOTO CAROUSEL === */
+(function initCarousel() {
+  const carousel = document.getElementById('carousel');
+  if (!carousel) return;
+
+  const track = carousel.querySelector('.carousel-track');
+  const slides = carousel.querySelectorAll('.carousel-slide');
+  const prevBtn = carousel.querySelector('.carousel-prev');
+  const nextBtn = carousel.querySelector('.carousel-next');
+  const dotsContainer = document.getElementById('carousel-dots');
+
+  if (!slides.length) return;
+
+  let current = 0;
+  const total = slides.length;
+
+  // Create dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.classList.add('carousel-dot');
+    if (i === 0) dot.classList.add('active');
+    dot.setAttribute('aria-label', `Ir a foto ${i + 1}`);
+    dot.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+  function goTo(index) {
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+
+  // Auto-play every 5 seconds
+  let autoPlay = setInterval(() => goTo(current + 1), 5000);
+
+  carousel.addEventListener('mouseenter', () => clearInterval(autoPlay));
+  carousel.addEventListener('mouseleave', () => {
+    autoPlay = setInterval(() => goTo(current + 1), 5000);
+  });
+
+  // Touch support
+  let touchStartX = 0;
+  carousel.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    clearInterval(autoPlay);
+  }, { passive: true });
+
+  carousel.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      diff > 0 ? goTo(current + 1) : goTo(current - 1);
+    }
+    autoPlay = setInterval(() => goTo(current + 1), 5000);
+  }, { passive: true });
+})();

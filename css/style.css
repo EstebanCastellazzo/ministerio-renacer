@@ -137,6 +137,12 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+.preloader-logo {
+  width: 180px;
+  margin-bottom: 24px;
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
 .cross-icon {
   font-size: 48px;
   color: var(--primary-light);
@@ -201,8 +207,16 @@ h1, h2, h3, h4, h5, h6 {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: var(--white);
+}
+
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  transition: opacity var(--duration);
+}
+
+.nav-logo-img:hover {
+  opacity: 0.85;
 }
 
 .logo-cross {
@@ -1661,6 +1675,123 @@ h1, h2, h3, h4, h5, h6 {
   height: 28px;
 }
 
+/* === PASTOR PHOTO === */
+.pastors-photo {
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-light);
+}
+
+/* === CAROUSEL === */
+.carousel {
+  position: relative;
+  margin-top: 48px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s var(--ease);
+  will-change: transform;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.15);
+  font-size: 18px;
+  cursor: pointer;
+  transition: all var(--duration);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.carousel-btn:hover {
+  background: rgba(124,58,237,0.7);
+}
+
+.carousel-prev { left: 16px; }
+.carousel-next { right: 16px; }
+
+.carousel-dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  border: none;
+  cursor: pointer;
+  transition: all var(--duration);
+  padding: 0;
+}
+
+.carousel-dot.active {
+  background: var(--primary-light);
+  transform: scale(1.2);
+}
+
+/* === MINISTERIO BRAND (Logo + Name) === */
+.ministerio-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.ministerio-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+}
+
+.ministerio-brand .ministerio-title {
+  margin-bottom: 0;
+}
+
+/* === FOOTER LOGO === */
+.footer-logo-img {
+  height: 36px;
+  width: auto;
+  margin-bottom: 16px;
+}
+
 /* === SCROLL REVEAL ANIMATIONS === */
 .reveal,
 .reveal-left,
@@ -1852,6 +1983,14 @@ h1, h2, h3, h4, h5, h6 {
 
   .horario-time {
     font-size: 2.5rem;
+  }
+
+  .carousel-slide img {
+    height: 250px;
+  }
+
+  .nav-logo-img {
+    height: 32px;
   }
 
   /* Actividades */
