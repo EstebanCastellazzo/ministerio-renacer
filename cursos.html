@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cursos y programas de formacion del Ministerio Cristiano Renacer. Inscribite en nuestros cursos de formacion biblica, discipulado y sanidad emocional." />
+  <title>Cursos | Ministerio Cristiano Renacer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/cursos.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar" class="scrolled">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-cross">&#10013;</span>
+        <div class="logo-text">
+          <span class="logo-main">Ministerio Cristiano</span>
+          <span class="logo-sub">Renacer</span>
+        </div>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="index.html#nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="index.html#ministerios" class="nav-link">Ministerios</a></li>
+        <li><a href="cursos.html" class="nav-link active">Cursos</a></li>
+        <li><a href="index.html#contacto" class="nav-link nav-cta">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO CURSOS ===== -->
+  <section class="cursos-hero">
+    <div class="cursos-hero-bg">
+      <div class="hero-gradient"></div>
+    </div>
+    <div class="cursos-hero-content reveal">
+      <div class="hero-badge">Formacion Espiritual</div>
+      <h1 class="hero-title">
+        Nuestros <span class="gradient-text">Cursos</span>
+      </h1>
+      <p class="hero-verse">Formacion continua para cada etapa de tu camino de fe</p>
+      <a href="#cursos-lista" class="btn btn-primary">Ver todos los cursos</a>
+    </div>
+  </section>
+
+  <!-- ===== BENEFICIOS ===== -->
+  <section class="section cursos-benefits">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">&#10024; Por que elegirnos</span>
+        <h2 class="section-title">Formacion que transforma</h2>
+        <p class="section-subtitle">Cada curso esta disenado para impactar tu vida espiritual y personal</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card reveal-left">
+          <div class="benefit-icon">&#128218;</div>
+          <h3>Base Biblica Solida</h3>
+          <p>Todo nuestro contenido esta fundamentado en la Palabra de Dios con rigor teologico.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">&#128101;</div>
+          <h3>Grupos Reducidos</h3>
+          <p>Clases con atencion personalizada para un aprendizaje mas profundo y significativo.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">&#127891;</div>
+          <h3>Docentes Capacitados</h3>
+          <p>Profesionales con formacion teologica y experiencia pastoral comprobada.</p>
+        </div>
+        <div class="benefit-card reveal-right">
+          <div class="benefit-icon">&#128176;</div>
+          <h3>Totalmente Gratuito</h3>
+          <p>Creemos que la formacion espiritual debe ser accesible para todos, sin costo alguno.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CATALOGO DE CURSOS ===== -->
+  <section id="cursos-lista" class="section cursos-catalog">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">&#128214; Catalogo de cursos</span>
+        <h2 class="section-title">Programas Disponibles</h2>
+        <p class="section-subtitle">Elige el programa que mejor se adapte a tu etapa de crecimiento</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="cursos-filters reveal">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="basico">Basico</button>
+        <button class="filter-btn" data-filter="intermedio">Intermedio</button>
+        <button class="filter-btn" data-filter="avanzado">Avanzado</button>
+        <button class="filter-btn" data-filter="especial">Especial</button>
+      </div>
+
+      <!-- Course Cards -->
+      <div class="cursos-grid">
+
+        <div class="curso-card reveal" data-category="basico">
+          <div class="curso-badge basico">Basico</div>
+          <div class="curso-icon">&#128214;</div>
+          <h3>Formacion Biblica</h3>
+          <p>Conoce las Escrituras desde los fundamentos hasta estudios avanzados. Ideal para quienes inician su camino de fe.</p>
+          <div class="curso-meta">
+            <span class="curso-duration">&#128337; 3 meses</span>
+            <span class="curso-modality">&#127979; Presencial</span>
+          </div>
+          <div class="curso-details">
+            <div class="detail-item">
+              <strong>Inicio:</strong> Marzo y Agosto
+            </div>
+            <div class="detail-item">
+              <strong>Horario:</strong> Sabados 16:00 hs
+            </div>
+            <div class="detail-item">
+              <strong>Requisitos:</strong> Ninguno
+            </div>
+          </div>
+          <a href="index.html#contacto" class="btn btn-primary btn-full">Inscribirme</a>
+        </div>
+
+        <div class="curso-card reveal" data-category="basico">
+          <div class="curso-badge basico">Basico</div>
+          <div class="curso-icon">&#127793;</div>
+          <h3>Discipulado Nivel 1</h3>
+          <p>El primer paso en tu camino de fe. Aprende los fundamentos de la vida cristiana en un ambiente intimo y cercano.</p>
+          <div class="curso-meta">
+            <span class="curso-duration">&#128337; 2 meses</span>
+            <span class="curso-modality">&#127979; Presencial</span>
+          </div>
+          <div class="curso-details">
+            <div class="detail-item">
+              <strong>Inicio:</strong> Inscripcion permanente
+            </div>
+            <div class="detail-item">
+              <strong>Horario:</strong> Miercoles 19:00 hs
+            </div>
+            <div class="detail-item">
+              <strong>Requisitos:</strong> Ninguno
+            </div>
+          </div>
+          <a href="index.html#contacto" class="btn btn-primary btn-full">Inscribirme</a>
+        </div>
+
+        <div class="curso-card reveal" data-category="intermedio">
+          <div class="curso-badge intermedio">Intermedio</div>
+          <div class="curso-icon">&#127795;</div>
+          <h3>Discipulado Nivel 2</h3>
+          <p>Profundiza tu relacion con Dios y descubre tu llamado ministerial. Para quienes ya tienen bases solidas.</p>
+          <div class="curso-meta">
+            <span class="curso-duration">&#128337; 3 meses</span>
+            <span class="curso-modality">&#127979; Presencial</span>
+          </div>
+          <div class="curso-details">
+            <div class="detail-item">
+              <strong>Inicio:</strong> Marzo y Agosto
+            </div>
+            <div class="detail-item">
+              <strong>Horario:</strong> Miercoles 19:00 hs
+            </div>
+            <div class="detail-item">
+              <strong>Requisitos:</strong> Discipulado Nivel 1
+            </div>
+          </div>
+          <a href="index.html#contacto" class="btn btn-primary btn-full">Inscribirme</a>
+        </div>
+
+        <div class="curso-card reveal" data-category="intermedio">
+          <div class="curso-badge intermedio">Intermedio</div>
+          <div class="curso-icon">&#127979;</div>
+          <h3>Escuela de Servicio</h3>
+          <p>Aprende a servir con excelencia en las diferentes areas del ministerio. Formacion practica y teorica.</p>
+          <div class="curso-meta">
+            <span class="curso-duration">&#128337; 4 meses</span>
+            <span class="curso-modality">&#127979; Presencial</span>
+          </div>
+          <div class="curso-details">
+            <div class="detail-item">
+              <strong>Inicio:</strong> Abril
+            </div>
+            <div class="detail-item">
+              <strong>Horario:</strong> Sabados 16:00 hs
+            </div>
+            <div class="detail-item">
+              <strong>Requisitos:</strong> Discipulado Nivel 1
+            </div>
+          </div>
+          <a href="index.html#contacto" class="btn btn-primary btn-full">Inscribirme</a>
+        </div>
+
+        <div class="curso-card reveal" data-category="avanzado">
+          <div class="curso-badge avanzado">Avanzado</div>
+          <div class="curso-icon">&#127891;</div>
+          <h3>Formacion Teologica</h3>
+          <p>Cursos de nivel superior para quienes sienten el llamado al liderazgo y al ministerio pastoral.</p>
+          <div class="curso-meta">
+            <span class="curso-duration">&#128337; 6 meses</span>
+            <span class="curso-modality">&#127979; Presencial</span>
+          </div>
+          <div class="curso-details">
+            <div class="detail-item">
+              <strong>Inicio:</strong> Marzo
+            </div>
+            <div class="detail-item">
+              <strong>Horario:</strong> Sabados 10:00 hs
+            </div>
+            <div class="detail-item">
+              <strong>Requisitos:</strong> Discipulado Nivel 2
+            </div>
+          </div>
+          <a href="index.html#contacto" class="btn btn-primary btn-full">Inscribirme</a>
+        </div>
+
+        <div class="curso-card reveal" data-category="especial">
+          <div class="curso-badge especial">Especial</div>
+          <div class="curso-icon">&#128134;</div>
+          <h3>Sanidad Emocional</h3>
+          <p>Un programa de sanidad interior que combina principios biblicos con herramientas psicologicas para la restauracion personal.</p>
+          <div class="curso-meta">
+            <span class="curso-duration">&#128337; 2 meses</span>
+            <span class="curso-modality">&#127979; Presencial</span>
+          </div>
+          <div class="curso-details">
+            <div class="detail-item">
+              <strong>Inicio:</strong> Mayo y Octubre
+            </div>
+            <div class="detail-item">
+              <strong>Horario:</strong> Viernes 19:00 hs
+            </div>
+            <div class="detail-item">
+              <strong>Requisitos:</strong> Ninguno
+            </div>
+          </div>
+          <a href="index.html#contacto" class="btn btn-primary btn-full">Inscribirme</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RUTA DE FORMACION ===== -->
+  <section class="section cursos-path">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">&#128204; Tu camino</span>
+        <h2 class="section-title">Ruta de Formacion</h2>
+        <p class="section-subtitle">Sigue este recorrido para un crecimiento espiritual integral</p>
+      </div>
+      <div class="path-timeline">
+        <div class="path-step reveal-left">
+          <div class="path-number">1</div>
+          <div class="path-content">
+            <h3>Formacion Biblica</h3>
+            <p>Comienza conociendo las bases de la fe y la Palabra de Dios.</p>
+          </div>
+        </div>
+        <div class="path-step reveal-right">
+          <div class="path-number">2</div>
+          <div class="path-content">
+            <h3>Discipulado Nivel 1</h3>
+            <p>Da tus primeros pasos como discipulo de Cristo en comunidad.</p>
+          </div>
+        </div>
+        <div class="path-step reveal-left">
+          <div class="path-number">3</div>
+          <div class="path-content">
+            <h3>Discipulado Nivel 2</h3>
+            <p>Profundiza tu fe y descubre tu llamado ministerial.</p>
+          </div>
+        </div>
+        <div class="path-step reveal-right">
+          <div class="path-number">4</div>
+          <div class="path-content">
+            <h3>Escuela de Servicio</h3>
+            <p>Aprende a servir en el ministerio con excelencia y dedicacion.</p>
+          </div>
+        </div>
+        <div class="path-step reveal-left">
+          <div class="path-number">5</div>
+          <div class="path-content">
+            <h3>Formacion Teologica</h3>
+            <p>Alcanza el nivel mas alto de preparacion para el liderazgo pastoral.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIOS ===== -->
+  <section class="section cursos-testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">&#128172; Testimonios</span>
+        <h2 class="section-title">Lo que dicen nuestros alumnos</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal-left">
+          <div class="testimonial-quote">"</div>
+          <p>Los cursos de formacion biblica cambiaron completamente mi manera de entender la Palabra de Dios. Hoy puedo compartir lo aprendido con mi familia.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">M</div>
+            <div>
+              <strong>Maria G.</strong>
+              <small>Formacion Biblica</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="testimonial-quote">"</div>
+          <p>El programa de sanidad emocional fue una experiencia transformadora. Encontre libertad y paz que no pensaba que fuera posible.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">C</div>
+            <div>
+              <strong>Carlos R.</strong>
+              <small>Sanidad Emocional</small>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal-right">
+          <div class="testimonial-quote">"</div>
+          <p>El discipulado me dio herramientas concretas para vivir mi fe en el dia a dia. Los pastores y docentes son increibles.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">L</div>
+            <div>
+              <strong>Laura P.</strong>
+              <small>Discipulado Nivel 2</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="cursos-cta">
+    <div class="cursos-cta-bg"></div>
+    <div class="container reveal">
+      <div class="cta-content">
+        <h2>Comienza tu camino de formacion hoy</h2>
+        <p>No importa en que etapa estes, hay un curso disenado para vos. Inscribite y da el siguiente paso en tu fe.</p>
+        <div class="cta-actions">
+          <a href="index.html#contacto" class="btn btn-primary">Inscribirme ahora</a>
+          <a href="https://wa.me/5492616633864" target="_blank" rel="noopener" class="btn btn-ghost">Consultar por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-cross">&#10013;</span>
+          <div>
+            <span class="logo-main">Ministerio Cristiano</span>
+            <span class="logo-sub">Renacer</span>
+          </div>
+        </div>
+        <p class="footer-tagline">Transformando vidas desde 1997 en Mendoza, Argentina.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegacion</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
+          <li><a href="index.html#ministerios">Ministerios</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Cursos</h4>
+        <ul>
+          <li><a href="#cursos-lista">Formacion Biblica</a></li>
+          <li><a href="#cursos-lista">Discipulado</a></li>
+          <li><a href="#cursos-lista">Escuela de Servicio</a></li>
+          <li><a href="#cursos-lista">Formacion Teologica</a></li>
+          <li><a href="#cursos-lista">Sanidad Emocional</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contacto</h4>
+        <ul>
+          <li>Boulogne Sur Mer 2185</li>
+          <li>Mendoza, Argentina</li>
+          <li><a href="tel:+5492616633864">+54 9 261 663-3864</a></li>
+          <li><a href="mailto:ministeriocristianorenacermza@gmail.com">Enviar email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Ministerio Cristiano Renacer &mdash; Mendoza, Argentina</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/5492616633864" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/cursos.js"></script>
+</body>
+</html>
