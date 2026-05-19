@@ -533,40 +533,6 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 
-.btn-youtube {
-  background: #FF0000;
-  color: var(--white);
-  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
-}
-
-.btn-youtube:hover {
-  background: #CC0000;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4);
-}
-
-.ministerio-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-}
-
-.actividad-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  align-items: center;
-}
-
-.link-arrow.yt {
-  color: #FF0000;
-}
-
-.link-arrow.yt:hover {
-  color: #CC0000;
-}
-
 /* Scroll hint */
 .hero-scroll-hint {
   position: absolute;
