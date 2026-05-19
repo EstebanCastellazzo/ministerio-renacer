@@ -137,6 +137,22 @@
   display: none;
 }
 
+.curso-card .btn + .btn {
+  margin-top: 10px;
+}
+
+.btn-youtube {
+  background: #FF0000;
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+.btn-youtube:hover {
+  background: #CC0000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4);
+}
+
 .curso-badge {
   position: absolute;
   top: 20px;
