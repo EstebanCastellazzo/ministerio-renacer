@@ -13,9 +13,9 @@ Mientras una foto no esté subida, el sitio muestra el diseño anterior
 | Estado | Archivo | Qué foto va |
 |--------|---------|-------------|
 | ✅ conectada | `pastores.jpg` | Pastores Alejandro y Mariela (sección Quiénes Somos) |
-| ⬜ pendiente | `luz-en-la-oscuridad.jpg` | Ministerio de jóvenes / adolescentes |
-| ⬜ pendiente | `renacer-kids.jpg` | Ministerio de niños |
-| ⬜ pendiente | `cielos-abiertos.jpg` | Fundación / comedor comunitario |
+| ✅ conectada | `luz-en-la-oscuridad.jpg` | Ministerio de jóvenes / adolescentes |
+| ✅ conectada | `renacer-kids.jpg` | Ministerio de niños |
+| ✅ conectada | `cielos-abiertos.jpg` | Fundación / comedor comunitario |
 | ⬜ pendiente | `inicio-fondo.jpg` | Foto de fondo del Hero (opcional) |
 | ⬜ pendiente | `horarios-fondo.jpg` | Foto de fondo de Horarios (opcional) |
 | ⬜ pendiente | `podcast-fondo.jpg` | Foto de fondo de Podcast (opcional) |

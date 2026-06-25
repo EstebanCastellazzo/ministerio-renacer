@@ -687,14 +687,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pastors-avatar {
-  width: 56px;
-  height: 56px;
-  min-width: 56px;
+  width: 88px;
+  height: 88px;
+  min-width: 88px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: var(--white);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1019,6 +1019,18 @@ h1, h2, h3, h4, h5, h6 {
 .glow-purple { filter: drop-shadow(0 0 30px rgba(124,58,237,0.4)); }
 .glow-yellow { filter: drop-shadow(0 0 30px rgba(245,158,11,0.4)); }
 .glow-blue { filter: drop-shadow(0 0 30px rgba(59,130,246,0.4)); }
+
+/* Foto del ministerio: cubre el area del emoji cuando el archivo existe */
+.ministerio-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  z-index: 2;
+}
 
 /* === ACTIVIDADES === */
 .actividades {
@@ -1738,7 +1750,7 @@ h1, h2, h3, h4, h5, h6 {
   .ministerio-feature.reverse .ministerio-visual { order: 2; }
 
   .ministerio-visual {
-    min-height: 150px;
+    min-height: 220px;
   }
 
   .actividades-grid {
