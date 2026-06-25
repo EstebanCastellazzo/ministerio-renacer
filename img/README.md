@@ -16,9 +16,21 @@ Mientras una foto no esté subida, el sitio muestra el diseño anterior
 | ✅ conectada | `luz-en-la-oscuridad.jpg` | Ministerio de jóvenes / adolescentes |
 | ✅ conectada | `renacer-kids.jpg` | Ministerio de niños |
 | ✅ conectada | `cielos-abiertos.jpg` | Fundación / comedor comunitario |
-| ⬜ pendiente | `inicio-fondo.jpg` | Foto de fondo del Hero (opcional) |
-| ⬜ pendiente | `horarios-fondo.jpg` | Foto de fondo de Horarios (opcional) |
-| ⬜ pendiente | `podcast-fondo.jpg` | Foto de fondo de Podcast (opcional) |
+| ✅ conectada | `inicio-fondo.jpg` | Foto de fondo del Hero (opcional) |
+| ✅ conectada | `horarios-fondo.jpg` | Foto de fondo de Horarios (opcional) |
+| ✅ conectada | `podcast-fondo.jpg` | Foto de fondo de Podcast (opcional) |
+
+### Carrusel de fotos (debajo de los horarios)
+
+Subí las fotos que quieras con estos nombres y aparecen solas, en orden.
+Podés poner de 1 hasta 12. Si no subís ninguna, el carrusel queda oculto.
+
+| Estado | Archivo | Qué foto va |
+|--------|---------|-------------|
+| ✅ conectada | `carrusel-1.jpg` | 1ª foto del carrusel |
+| ✅ conectada | `carrusel-2.jpg` | 2ª foto del carrusel |
+| ✅ conectada | `carrusel-3.jpg` | 3ª foto del carrusel |
+| ✅ conectada | `carrusel-4.jpg` … `carrusel-12.jpg` | Las siguientes, en orden |
 
 ### Página de Cursos (`cursos.html`)
 
