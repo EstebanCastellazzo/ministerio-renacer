@@ -41,5 +41,18 @@ Podés poner de 1 hasta 12. Si no subís ninguna, el carrusel queda oculto.
 | ⬜ pendiente | `curso-teologica.jpg` | Tarjeta Formación Teológica (opcional) |
 | ⬜ pendiente | `curso-sanidad.jpg` | Tarjeta Sanidad Emocional (opcional) |
 
+### Landing `/actividades` — carrusel (6 fotos)
+
+Para el carrusel debajo del mensaje evangelístico. Subí estas 6 a la carpeta `img/`:
+
+| Estado | Archivo | Qué foto va |
+|--------|---------|-------------|
+| ✅ conectada | `actividades-1.jpg` | Foto 1 del carrusel de la landing |
+| ✅ conectada | `actividades-2.jpg` | Foto 2 del carrusel de la landing |
+| ✅ conectada | `actividades-3.jpg` | Foto 3 del carrusel de la landing |
+| ✅ conectada | `actividades-4.jpg` | Foto 4 del carrusel de la landing |
+| ✅ conectada | `actividades-5.jpg` | Foto 5 del carrusel de la landing |
+| ✅ conectada | `actividades-6.jpg` | Foto 6 del carrusel de la landing |
+
 > **✅ conectada** = el código ya la espera, solo falta subir el archivo.
 > **⬜ pendiente** = todavía no la conectamos en el código.

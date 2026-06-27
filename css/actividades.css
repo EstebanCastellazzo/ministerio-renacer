@@ -338,6 +338,88 @@
   color: rgba(255,255,255,0.6);
 }
 
+/* === MENSAJE EVANGELÍSTICO === */
+.acti-evangelio {
+  background: var(--white);
+  text-align: center;
+}
+
+.acti-evangelio .container {
+  max-width: 760px;
+}
+
+.evangelio-title {
+  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+  font-weight: 800;
+  color: var(--gray-900);
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin: 16px 0 28px;
+}
+
+.evangelio-text p {
+  font-size: 1.13rem;
+  color: var(--gray-700);
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+.evangelio-text strong {
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.evangelio-verse {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-style: italic;
+  color: var(--primary);
+  line-height: 1.5;
+  max-width: 620px;
+  margin: 34px auto;
+  padding: 26px 0;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.evangelio-verse cite {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-top: 14px;
+}
+
+.evangelio-call {
+  font-weight: 600;
+  color: var(--gray-900) !important;
+}
+
+/* === GALERÍA / CARRUSEL === */
+.acti-galeria {
+  background: var(--light);
+}
+
+.acti-galeria[hidden] { display: none; }
+
+.acti-carrusel {
+  position: relative;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.acti-carrusel .carrusel-dot {
+  background: rgba(124,58,237,0.22);
+}
+
+.acti-carrusel .carrusel-dot.active {
+  background: var(--primary);
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .acti-hero {
@@ -384,4 +466,7 @@
   .acti-cta {
     padding: 70px 20px;
   }
+
+  .evangelio-text p { font-size: 1.05rem; }
+  .evangelio-verse { font-size: 1.3rem; }
 }
