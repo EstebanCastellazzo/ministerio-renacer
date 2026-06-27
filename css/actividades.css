@@ -422,6 +422,10 @@
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
+  /* Navbar mobile: logo centrado y sin botón de WhatsApp arriba */
+  .nav-container { justify-content: center; }
+  .nav-container .nav-wa { display: none; }
+
   .acti-hero {
     min-height: auto;
     padding: 120px 20px 70px;
