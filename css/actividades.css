@@ -1,0 +1,476 @@
+/* =========================================
+   ACTIVIDADES — Landing Page Styles
+   ========================================= */
+
+/* === BOTÓN WHATSAPP === */
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(37,211,102,0.4);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(37,211,102,0.55);
+  color: var(--white);
+}
+
+.btn-lg {
+  padding: 18px 38px;
+  font-size: 16px;
+}
+
+.wa-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.btn-lg .wa-icon {
+  width: 21px;
+  height: 21px;
+}
+
+.nav-wa {
+  color: var(--white);
+}
+
+/* === HERO === */
+.acti-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 140px 24px 90px;
+  text-align: center;
+}
+
+.acti-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--dark);
+  z-index: 0;
+}
+
+.acti-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
+.acti-title {
+  margin-bottom: 24px;
+}
+
+.acti-caret {
+  display: inline-block;
+  width: 3px;
+  height: 0.85em;
+  margin-left: 6px;
+  background: var(--secondary);
+  vertical-align: text-bottom;
+  border-radius: 2px;
+  animation: acti-blink 1s steps(1) infinite;
+}
+
+@keyframes acti-blink {
+  50% { opacity: 0; }
+}
+
+.acti-hero-text {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.acti-hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+/* === HISTORIA === */
+.historia {
+  background: var(--white);
+}
+
+.historia-timeline {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.historia-timeline::before {
+  content: '';
+  position: absolute;
+  left: 31px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+  opacity: 0.25;
+}
+
+.historia-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  margin-bottom: 44px;
+  position: relative;
+}
+
+.historia-step:last-child {
+  margin-bottom: 0;
+}
+
+.historia-marker {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 22px rgba(124,58,237,0.3);
+}
+
+.historia-body {
+  padding-top: 6px;
+}
+
+.historia-body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+}
+
+.historia-body p {
+  font-size: 15px;
+  color: var(--gray-500);
+  line-height: 1.7;
+}
+
+/* === MENSAJE DE ESPERANZA === */
+.esperanza {
+  position: relative;
+  padding: 110px 24px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.esperanza-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--primary-dark), var(--dark));
+}
+
+.esperanza::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(245,158,11,0.12), transparent 62%);
+  z-index: 0;
+}
+
+.esperanza-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.esperanza-cross {
+  font-size: 40px;
+  color: var(--secondary-light);
+  margin-bottom: 18px;
+}
+
+.esperanza h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.5px;
+  margin-bottom: 22px;
+}
+
+.esperanza p {
+  font-size: 1.12rem;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.esperanza p strong {
+  color: var(--white);
+}
+
+.esperanza-verse {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--secondary-light);
+  line-height: 1.5;
+}
+
+.esperanza-verse cite {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: 0.85rem;
+  font-style: normal;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 1px;
+  margin-top: 12px;
+}
+
+/* === INVITACIÓN === */
+.invitacion {
+  background: var(--light);
+}
+
+.invitacion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.invi-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  padding: 36px 28px;
+  text-align: center;
+  transition: all var(--duration) var(--ease);
+}
+
+.invi-card:hover {
+  border-color: var(--primary-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.invi-icon {
+  font-size: 38px;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.invi-card strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+}
+
+.invi-card p {
+  font-size: 14px;
+  color: var(--gray-500);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.invi-card .link-arrow {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* === CTA FINAL === */
+.acti-cta {
+  position: relative;
+  padding: 110px 24px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.acti-cta-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #128C7E, var(--dark));
+}
+
+.acti-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(37,211,102,0.16), transparent 60%);
+  z-index: 0;
+}
+
+.acti-cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.acti-cta-content h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+
+.acti-cta-content p {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.acti-cta-hint {
+  display: block;
+  margin-top: 18px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* === MENSAJE EVANGELÍSTICO === */
+.acti-evangelio {
+  background: var(--white);
+  text-align: center;
+}
+
+.acti-evangelio .container {
+  max-width: 760px;
+}
+
+.evangelio-title {
+  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+  font-weight: 800;
+  color: var(--gray-900);
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin: 16px 0 28px;
+}
+
+.evangelio-text p {
+  font-size: 1.13rem;
+  color: var(--gray-700);
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+.evangelio-text strong {
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.evangelio-verse {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-style: italic;
+  color: var(--primary);
+  line-height: 1.5;
+  max-width: 620px;
+  margin: 34px auto;
+  padding: 26px 0;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.evangelio-verse cite {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-top: 14px;
+}
+
+.evangelio-call {
+  font-weight: 600;
+  color: var(--gray-900) !important;
+}
+
+/* === GALERÍA / CARRUSEL === */
+.acti-galeria {
+  background: var(--light);
+}
+
+.acti-galeria[hidden] { display: none; }
+
+.acti-carrusel {
+  position: relative;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.acti-carrusel .carrusel-dot {
+  background: rgba(124,58,237,0.22);
+}
+
+.acti-carrusel .carrusel-dot.active {
+  background: var(--primary);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  /* Navbar mobile: logo centrado y sin botón de WhatsApp arriba */
+  .nav-container { justify-content: center; }
+  .nav-container .nav-wa { display: none; }
+
+  .acti-hero {
+    min-height: auto;
+    padding: 120px 20px 70px;
+  }
+
+  .acti-hero-text {
+    font-size: 1.05rem;
+  }
+
+  .acti-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .acti-hero-actions .btn {
+    justify-content: center;
+  }
+
+  .invitacion-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .historia-step {
+    gap: 18px;
+    margin-bottom: 34px;
+  }
+
+  .historia-marker {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    font-size: 13px;
+  }
+
+  .historia-timeline::before {
+    left: 25px;
+  }
+
+  .esperanza,
+  .acti-cta {
+    padding: 70px 20px;
+  }
+
+  .evangelio-text p { font-size: 1.05rem; }
+  .evangelio-verse { font-size: 1.3rem; }
+}

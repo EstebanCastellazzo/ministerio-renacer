@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=2" />
+  <link rel="stylesheet" href="css/style.css?v=3" />
 </head>
 <body>
 
@@ -24,11 +24,7 @@
   <header id="navbar">
     <nav class="nav-container">
       <a href="#inicio" class="nav-logo">
-        <span class="logo-cross">✝</span>
-        <div class="logo-text">
-          <span class="logo-main">Ministerio Cristiano</span>
-          <span class="logo-sub">Renacer</span>
-        </div>
+        <img src="img/logo-renacer.png" alt="Ministerio Cristiano Renacer" class="nav-logo-img" style="height:55px;width:auto;display:block;" />
       </a>
 
       <button class="hamburger" id="hamburger" aria-label="Abrir menú">
@@ -139,7 +135,10 @@
             Después de más de 27 años de ministerio, continuamos expandiendo nuestros programas e iniciativas de alcance, creyendo en el poder redentor de la cruz para la salvación, el perdón y la restauración personal.
           </p>
           <div class="pastors-card reveal">
-            <div class="pastors-avatar">A&M</div>
+            <div class="pastors-avatar">
+              <span class="pastors-initials">A&amp;M</span>
+              <img src="img/pastores.jpg" alt="Pastores Alejandro y Mariela Castellazzo" onerror="this.remove()" />
+            </div>
             <div class="pastors-info">
               <strong>Pastores Alejandro y Mariela Castellazzo</strong>
               <small>Alejandro — Teólogo, Coach y Licenciado en Psicología Clínica</small>
@@ -208,6 +207,16 @@
           <a href="https://maps.google.com/?q=Boulogne+Sur+Mer+2185+Mendoza+Argentina" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Ver en mapa ↗</a>
         </div>
       </div>
+
+      <!-- Carrusel de fotos (se llena solo con img/carrusel-1.jpg, carrusel-2.jpg, ...) -->
+      <div class="horarios-carrusel" id="horarios-carrusel" hidden>
+        <div class="carrusel-viewport">
+          <div class="carrusel-track" id="carrusel-track"></div>
+        </div>
+        <button class="carrusel-btn carrusel-prev" id="carrusel-prev" type="button" aria-label="Foto anterior">‹</button>
+        <button class="carrusel-btn carrusel-next" id="carrusel-next" type="button" aria-label="Foto siguiente">›</button>
+        <div class="carrusel-dots" id="carrusel-dots"></div>
+      </div>
     </div>
   </section>
 
@@ -237,6 +246,7 @@
         <div class="ministerio-visual">
           <div class="ministerio-icon-big glow-purple">🌟</div>
           <div class="ministerio-deco"></div>
+          <img class="ministerio-photo" src="img/luz-en-la-oscuridad.jpg" alt="Luz en la Oscuridad" onerror="this.remove()" />
         </div>
       </div>
 
@@ -257,6 +267,7 @@
         <div class="ministerio-visual">
           <div class="ministerio-icon-big glow-yellow">🌈</div>
           <div class="ministerio-deco deco2"></div>
+          <img class="ministerio-photo" src="img/renacer-kids.jpg" alt="Renacer Kids" onerror="this.remove()" />
         </div>
       </div>
 
@@ -277,6 +288,7 @@
         <div class="ministerio-visual">
           <div class="ministerio-icon-big glow-blue">☁️</div>
           <div class="ministerio-deco deco3"></div>
+          <img class="ministerio-photo" src="img/cielos-abiertos.jpg" alt="Fundación Cielos Abiertos" onerror="this.remove()" />
         </div>
       </div>
     </div>
@@ -512,11 +524,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <div class="footer-logo">
-          <span class="logo-cross">✝</span>
-          <div>
-            <span class="logo-main">Ministerio Cristiano</span>
-            <span class="logo-sub">Renacer</span>
-          </div>
+          <img src="img/logo-renacer.png" alt="Ministerio Cristiano Renacer" class="footer-logo-img" style="height:62px;width:auto;display:block;" />
         </div>
         <p class="footer-tagline">Transformando vidas desde 1997 en Mendoza, Argentina.</p>
         <a href="cursos.html" class="btn btn-primary btn-sm" style="margin-bottom:12px;">Ver Cursos</a>

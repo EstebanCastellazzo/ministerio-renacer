@@ -1,0 +1,18 @@
+# =========================================
+#  Ministerio Cristiano Renacer
+#  Servir páginas .html sin la extensión en la URL.
+#  Ej: https://.../actividades  ->  muestra actividades.html
+#  (sin redirección y manteniendo la URL exacta, ideal para el QR de la folletería)
+# =========================================
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Si lo que se pide NO es un archivo real...
+  RewriteCond %{REQUEST_FILENAME} !-f
+  # ...ni una carpeta real...
+  RewriteCond %{REQUEST_FILENAME} !-d
+  # ...pero existe el .html con ese nombre, servirlo internamente.
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+)$ $1.html [L]
+</IfModule>

@@ -272,3 +272,85 @@
     });
   });
 })();
+
+/* === CARRUSEL DE FOTOS (HORARIOS) === */
+(function initCarrusel() {
+  const carrusel = document.getElementById('horarios-carrusel');
+  const track = document.getElementById('carrusel-track');
+  const dotsWrap = document.getElementById('carrusel-dots');
+  const prevBtn = document.getElementById('carrusel-prev');
+  const nextBtn = document.getElementById('carrusel-next');
+  if (!carrusel || !track || !dotsWrap) return;
+
+  // Subi fotos a img/ con estos nombres (carrusel-1.jpg, carrusel-2.jpg, ...)
+  // y aparecen solas, en orden. Las que no existan se ignoran sin romper nada.
+  const MAX = 12;
+  const candidates = [];
+  for (let i = 1; i <= MAX; i++) candidates.push(`img/carrusel-${i}.jpg`);
+
+  // Precargar y quedarnos solo con las fotos que realmente existen.
+  const checks = candidates.map(src => new Promise(resolve => {
+    const probe = new Image();
+    probe.onload = () => resolve(src);
+    probe.onerror = () => resolve(null);
+    probe.src = src;
+  }));
+
+  Promise.all(checks).then(sources => {
+    const found = sources.filter(Boolean);
+    if (!found.length) return; // sin fotos: el carrusel queda oculto
+
+    found.forEach((src, idx) => {
+      const slide = document.createElement('div');
+      slide.className = 'carrusel-slide';
+      const img = document.createElement('img');
+      img.src = src;
+      img.alt = `Foto ${idx + 1} del ministerio`;
+      img.loading = 'lazy';
+      slide.appendChild(img);
+      track.appendChild(slide);
+
+      const dot = document.createElement('button');
+      dot.className = 'carrusel-dot';
+      dot.type = 'button';
+      dot.setAttribute('aria-label', `Ir a la foto ${idx + 1}`);
+      dot.addEventListener('click', () => goTo(idx));
+      dotsWrap.appendChild(dot);
+    });
+
+    carrusel.hidden = false;
+
+    const total = found.length;
+    const dots = Array.from(dotsWrap.children);
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const AUTO = 5000;
+    let index = 0;
+    let timer = null;
+
+    function render() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    }
+    function restart() {
+      clearInterval(timer);
+      if (total > 1 && !reduceMotion) timer = setInterval(next, AUTO);
+    }
+    function goTo(i) { index = (i + total) % total; render(); restart(); }
+    function next() { goTo(index + 1); }
+    function prev() { goTo(index - 1); }
+
+    if (total > 1) {
+      nextBtn?.addEventListener('click', next);
+      prevBtn?.addEventListener('click', prev);
+      carrusel.addEventListener('mouseenter', () => clearInterval(timer));
+      carrusel.addEventListener('mouseleave', restart);
+    } else {
+      if (prevBtn) prevBtn.style.display = 'none';
+      if (nextBtn) nextBtn.style.display = 'none';
+      dotsWrap.style.display = 'none';
+    }
+
+    render();
+    restart();
+  });
+})();

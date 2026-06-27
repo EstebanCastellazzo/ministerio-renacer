@@ -361,7 +361,10 @@ h1, h2, h3, h4, h5, h6 {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: var(--dark);
+  background:
+    linear-gradient(rgba(15,15,35,0.7), rgba(15,15,35,0.88)),
+    url("../img/inicio-fondo.jpg") center / cover no-repeat,
+    var(--dark);
   z-index: 0;
 }
 
@@ -687,17 +690,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pastors-avatar {
-  width: 56px;
-  height: 56px;
-  min-width: 56px;
+  width: 88px;
+  height: 88px;
+  min-width: 88px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: var(--white);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pastors-avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .pastors-info strong {
@@ -763,7 +776,9 @@ h1, h2, h3, h4, h5, h6 {
   inset: 0;
   background:
     radial-gradient(ellipse 60% 50% at 20% 50%, rgba(124,58,237,0.12), transparent),
-    radial-gradient(ellipse 40% 40% at 80% 50%, rgba(59,130,246,0.1), transparent);
+    radial-gradient(ellipse 40% 40% at 80% 50%, rgba(59,130,246,0.1), transparent),
+    linear-gradient(rgba(15,15,35,0.72), rgba(15,15,35,0.72)),
+    url("../img/horarios-fondo.jpg") center / cover no-repeat;
 }
 
 .horarios .section-tag { color: var(--secondary); }
@@ -896,6 +911,90 @@ h1, h2, h3, h4, h5, h6 {
   border-color: rgba(255,255,255,0.5);
 }
 
+/* === CARRUSEL DE FOTOS === */
+.horarios-carrusel {
+  position: relative;
+  max-width: 920px;
+  margin: 56px auto 0;
+}
+
+.horarios-carrusel[hidden] { display: none; }
+
+.carrusel-viewport {
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: var(--shadow-lg);
+}
+
+.carrusel-track {
+  display: flex;
+  transition: transform 0.55s var(--ease);
+}
+
+.carrusel-slide {
+  min-width: 100%;
+  aspect-ratio: 16 / 9;
+  background: rgba(255,255,255,0.05);
+}
+
+.carrusel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(15,15,35,0.55);
+  color: var(--white);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background var(--duration) var(--ease);
+  z-index: 2;
+}
+
+.carrusel-btn:hover { background: var(--primary); }
+.carrusel-prev { left: 14px; }
+.carrusel-next { right: 14px; }
+
+.carrusel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.carrusel-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  cursor: pointer;
+  transition: background var(--duration) var(--ease), transform var(--duration) var(--ease);
+}
+
+.carrusel-dot.active {
+  background: var(--secondary);
+  transform: scale(1.3);
+}
+
+@media (max-width: 768px) {
+  .horarios-carrusel { margin-top: 36px; }
+  .carrusel-btn { width: 38px; height: 38px; font-size: 22px; }
+}
+
 /* === MINISTERIOS === */
 .ministerios {
   background: var(--white);
@@ -1010,6 +1109,18 @@ h1, h2, h3, h4, h5, h6 {
 .glow-yellow { filter: drop-shadow(0 0 30px rgba(245,158,11,0.4)); }
 .glow-blue { filter: drop-shadow(0 0 30px rgba(59,130,246,0.4)); }
 
+/* Foto del ministerio: cubre el area del emoji cuando el archivo existe */
+.ministerio-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  z-index: 2;
+}
+
 /* === ACTIVIDADES === */
 .actividades {
   background: var(--light);
@@ -1079,7 +1190,9 @@ h1, h2, h3, h4, h5, h6 {
   inset: 0;
   background:
     radial-gradient(ellipse 50% 50% at 70% 30%, rgba(124,58,237,0.15), transparent),
-    radial-gradient(ellipse 30% 40% at 20% 70%, rgba(245,158,11,0.08), transparent);
+    radial-gradient(ellipse 30% 40% at 20% 70%, rgba(245,158,11,0.08), transparent),
+    linear-gradient(rgba(15,15,35,0.72), rgba(15,15,35,0.72)),
+    url("../img/podcast-fondo.jpg") center / cover no-repeat;
 }
 
 .podcast .section-tag { color: var(--secondary); }
@@ -1728,7 +1841,7 @@ h1, h2, h3, h4, h5, h6 {
   .ministerio-feature.reverse .ministerio-visual { order: 2; }
 
   .ministerio-visual {
-    min-height: 150px;
+    min-height: 220px;
   }
 
   .actividades-grid {
