@@ -458,10 +458,18 @@ body.sin-video .lh-hero-media video { display: none; }
 .lh-precio-valor { font-size: 3rem; font-weight: 900; color: var(--white); line-height: 1; }
 .lh-precio-valor span { font-size: 1.6rem; vertical-align: super; color: var(--secondary-light); }
 .lh-precio-valor small { font-size: 1rem; font-weight: 600; color: var(--gray-400); margin-left: 8px; }
+.lh-precio-gratis {
+  background: linear-gradient(135deg, var(--secondary-light), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: .04em;
+}
 .lh-precio-nota { color: var(--secondary-light); font-weight: 600; font-size: .9rem; margin: 8px 0 18px; }
 .lh-precio-incluye { list-style: none; }
 .lh-precio-incluye li { padding: 6px 0; font-size: .95rem; color: var(--gray-300); }
 .lh-precio-garantia { margin-top: 18px; font-size: .9rem; color: var(--gray-400); }
+.lh-precio-garantia strong { color: var(--white); }
 
 /* --- Formulario --- */
 .lh-form-wrap {
