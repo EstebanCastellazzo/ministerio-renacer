@@ -3,15 +3,18 @@
  * Guarda las inscripciones del curso "Sanando la Herencia" en MySQL.
  * Recibe JSON por POST desde js/herencia.js y responde JSON.
  *
- * ⚙️ CONFIGURACIÓN: completá estos 4 datos con los de tu hosting
- * (los encontrás en cPanel > Bases de datos MySQL, o te los da tu proveedor).
+ * ⚙️ CONFIGURACIÓN: las credenciales van en config.php (ver config.ejemplo.php).
+ * Ese archivo vive solo en el hosting y no se sube a GitHub.
  */
-const DB_HOST = 'localhost';
-const DB_NAME = 'renacer_cursos';      // nombre de la base de datos
-const DB_USER = 'TU_USUARIO_MYSQL';    // usuario de MySQL
-const DB_PASS = 'TU_CONTRASENA_MYSQL'; // contraseña de MySQL
-
 header('Content-Type: application/json; charset=utf-8');
+
+$configPath = __DIR__ . '/config.php';
+if (!is_file($configPath)) {
+    http_response_code(500);
+    echo json_encode(['ok' => false, 'error' => 'El sitio no está configurado todavía (falta config.php).']);
+    exit;
+}
+$config = require $configPath;
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
@@ -66,9 +69,9 @@ $utm   = static function (string $clave) use ($datos): ?string {
 
 try {
     $pdo = new PDO(
-        'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4',
-        DB_USER,
-        DB_PASS,
+        'mysql:host=' . $config['host'] . ';dbname=' . $config['name'] . ';charset=utf8mb4',
+        $config['user'],
+        $config['pass'],
         [
             PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,

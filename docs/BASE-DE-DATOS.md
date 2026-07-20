@@ -48,17 +48,23 @@ La tabla guarda: nombre, apellido, teléfono, edad, curso, los UTM de la pauta
 
 ## Paso 3 — Conectar el formulario
 
-1. Abrí el archivo `inscripcion.php` (está en la raíz del sitio).
-2. Completá las 4 constantes del principio con tus datos reales:
+Las credenciales van en un archivo `config.php` que vive **solo en el hosting**
+(está en `.gitignore`, así la contraseña nunca queda expuesta en GitHub).
+
+1. Subí al hosting: `herencia.html`, `css/herencia.css`, `js/herencia.js`,
+   `inscripcion.php` y `config.ejemplo.php`.
+2. En **cPanel → Administrador de archivos**, copiá `config.ejemplo.php` y
+   renombrá la copia a `config.php`.
+3. Editá `config.php` con tus datos reales:
 
 ```php
-const DB_HOST = 'localhost';                    // casi siempre es localhost
-const DB_NAME = 'micuenta_renacer_cursos';      // el nombre COMPLETO de la base
-const DB_USER = 'micuenta_renacer_app';         // el usuario que creaste
-const DB_PASS = 'la_contraseña_que_elegiste';
+return [
+    'host' => 'localhost',            // casi siempre es localhost
+    'name' => 'renacer',              // el nombre COMPLETO de la base (con prefijo si lo tiene)
+    'user' => 'el_usuario_mysql',     // cPanel > Bases de datos MySQL > Usuarios actuales
+    'pass' => 'la_contraseña',
+];
 ```
-
-3. Subí al hosting: `herencia.html`, `css/herencia.css`, `js/herencia.js` e `inscripcion.php`.
 
 ---
 
