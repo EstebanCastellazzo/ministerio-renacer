@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Curso Sanando la Herencia — Identificá los patrones que heredaste de tu familia y aprendé a cortarlos. Con base bíblica y herramientas de psicología clínica. Ministerio Cristiano Renacer, Mendoza." />
+  <meta property="og:title" content="Sanando la Herencia — Rompé el patrón" />
+  <meta property="og:description" content="Lo que heredaste no tiene que definirte. Curso para identificar y cortar los patrones familiares que se repiten de generación en generación." />
+  <meta property="og:type" content="website" />
+  <title>Sanando la Herencia — Rompé el patrón | Ministerio Renacer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/herencia.css?v=1" />
+</head>
+<body>
+
+  <!-- ===== HERO CON VIDEO DE FONDO ===== -->
+  <section class="lh-hero" id="inicio">
+    <div class="lh-hero-media">
+      <!--
+        VIDEO DE FONDO: subí tu video a  video/fondo-herencia.mp4  (ideal: 10-20seg, loop, sin audio, comprimido <8MB).
+        Si el video no existe, la landing muestra el fondo animado de respaldo automáticamente.
+      -->
+      <video id="lh-video" autoplay muted loop playsinline preload="metadata" poster="img/herencia-poster.jpg">
+        <source src="video/fondo-herencia.mp4" type="video/mp4" />
+      </video>
+      <div class="lh-hero-fallback"></div>
+      <div class="lh-hero-overlay"></div>
+    </div>
+
+    <header class="lh-topbar">
+      <a href="index.html" class="lh-brand">
+        <img src="img/logo-renacer.png" alt="Ministerio Cristiano Renacer" onerror="this.outerHTML='<strong style=\'color:#fff;font-size:1.05rem;\'>✝ Renacer</strong>'" />
+      </a>
+      <a href="#inscripcion" class="lh-btn lh-btn-sm lh-btn-primary">Quiero inscribirme</a>
+    </header>
+
+    <div class="lh-hero-content">
+      <span class="lh-badge lh-reveal">✝ Curso presencial y online · Ministerio Renacer</span>
+      <h1 class="lh-reveal">
+        Lo que heredaste<br />
+        <span class="lh-tachado">no tiene que definirte<span class="lh-tachado-linea"></span></span>
+      </h1>
+      <p class="lh-hero-sub lh-reveal">
+        Enojo, miedo, escasez, silencio, abandono… hay patrones que se repiten en tu familia
+        hace generaciones. En este curso vas a aprender a <strong>identificarlos</strong> y,
+        con la guía de Dios, a <strong>cortarlos para siempre</strong>.
+      </p>
+      <div class="lh-hero-cta lh-reveal">
+        <a href="#inscripcion" class="lh-btn lh-btn-primary lh-btn-lg lh-pulse">Quiero romper el patrón →</a>
+        <a href="#patrones" class="lh-btn lh-btn-ghost lh-btn-lg">¿Cuál es mi patrón?</a>
+      </div>
+      <p class="lh-hero-verse lh-reveal">"Si el Hijo los libera, serán ustedes verdaderamente libres." — Juan 8:36</p>
+    </div>
+
+    <div class="lh-scroll-hint" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- ===== TEST INTERACTIVO: ¿TE SUENA FAMILIAR? ===== -->
+  <section class="lh-section lh-patrones" id="patrones">
+    <div class="lh-container">
+      <div class="lh-section-head lh-reveal">
+        <span class="lh-tag">Paso 1 · Identificar</span>
+        <h2>¿Te suena familiar?</h2>
+        <p>Tocá las frases que escuchaste (o dijiste) en tu casa. Sé honesto, nadie te está mirando.</p>
+      </div>
+
+      <div class="lh-chips lh-reveal" id="lh-chips">
+        <button type="button" class="lh-chip" data-patron="enojo">💥 "En esta familia somos de carácter fuerte"</button>
+        <button type="button" class="lh-chip" data-patron="escasez">💸 "La plata nunca alcanza, siempre fue así"</button>
+        <button type="button" class="lh-chip" data-patron="silencio">🤐 "De eso no se habla"</button>
+        <button type="button" class="lh-chip" data-patron="abandono">🚪 "Los hombres de esta familia siempre se van"</button>
+        <button type="button" class="lh-chip" data-patron="miedo">😰 "Mejor no arriesgues, ¿y si sale mal?"</button>
+        <button type="button" class="lh-chip" data-patron="rechazo">🥀 "Nunca soy suficiente, haga lo que haga"</button>
+        <button type="button" class="lh-chip" data-patron="control">⛓ "Acá se hace lo que yo digo"</button>
+        <button type="button" class="lh-chip" data-patron="adiccion">🍷 "Todos en la familia tuvimos ese problema"</button>
+        <button type="button" class="lh-chip" data-patron="ruptura">💔 "En mi familia todos los matrimonios terminan mal"</button>
+      </div>
+
+      <div class="lh-chips-result" id="lh-chips-result" hidden>
+        <div class="lh-chips-result-inner">
+          <p id="lh-chips-msg"></p>
+          <a href="#inscripcion" class="lh-btn lh-btn-primary">Quiero cortar con esto →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LA CADENA: ANIMACIÓN GENERACIONAL ===== -->
+  <section class="lh-section lh-cadena-sec">
+    <div class="lh-container">
+      <div class="lh-section-head lh-reveal">
+        <span class="lh-tag">Paso 2 · Entender</span>
+        <h2>El patrón viaja de generación en generación…<br /><span class="lh-grad">hasta que alguien lo corta.</span></h2>
+      </div>
+
+      <div class="lh-cadena" id="lh-cadena">
+        <div class="lh-gen lh-reveal">
+          <div class="lh-gen-circle">👴</div>
+          <strong>Tus abuelos</strong>
+          <small>Lo vivieron</small>
+        </div>
+        <div class="lh-link"></div>
+        <div class="lh-gen lh-reveal">
+          <div class="lh-gen-circle">👨</div>
+          <strong>Tus padres</strong>
+          <small>Lo repitieron</small>
+        </div>
+        <div class="lh-link"></div>
+        <div class="lh-gen lh-gen-vos lh-reveal">
+          <div class="lh-gen-circle">🙋</div>
+          <strong>VOS</strong>
+          <small>Podés cortarlo</small>
+          <span class="lh-corte" aria-hidden="true">✂</span>
+        </div>
+        <div class="lh-link lh-link-rota"></div>
+        <div class="lh-gen lh-gen-libre lh-reveal">
+          <div class="lh-gen-circle">👶</div>
+          <strong>Tus hijos</strong>
+          <small>Nacen libres</small>
+        </div>
+      </div>
+
+      <p class="lh-cadena-frase lh-reveal">
+        "Yo... castigo la maldad de los padres en los hijos hasta la tercera y cuarta generación...
+        pero trato con <em>amor inagotable</em> a mil generaciones de los que me aman." — Éxodo 20:5-6
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== QUÉ VAS A APRENDER ===== -->
+  <section class="lh-section lh-modulos">
+    <div class="lh-container">
+      <div class="lh-section-head lh-reveal">
+        <span class="lh-tag">Paso 3 · Cortar</span>
+        <h2>Qué vas a lograr en el curso</h2>
+      </div>
+
+      <div class="lh-modulos-grid">
+        <div class="lh-mod lh-reveal"><span class="lh-mod-num">01</span>
+          <h3>Mapear tu herencia</h3>
+          <p>Vas a armar tu propio "árbol de patrones" y ver con claridad qué recibiste de tu familia: lo bueno para honrar y lo tóxico para soltar.</p>
+        </div>
+        <div class="lh-mod lh-reveal"><span class="lh-mod-num">02</span>
+          <h3>Ponerle nombre al patrón</h3>
+          <p>Enojo, escasez, abandono, adicción, rechazo… identificar el patrón es el 50% de la libertad. Lo que no se nombra, se repite.</p>
+        </div>
+        <div class="lh-mod lh-reveal"><span class="lh-mod-num">03</span>
+          <h3>Entender cómo opera en vos</h3>
+          <p>Con herramientas de psicología clínica y verdad bíblica vas a descubrir cómo ese patrón influye hoy en tus decisiones, vínculos y economía.</p>
+        </div>
+        <div class="lh-mod lh-reveal"><span class="lh-mod-num">04</span>
+          <h3>Cortarlo en la cruz</h3>
+          <p>Un proceso guiado de perdón, renuncia y sanidad interior para cortar el patrón de raíz, con el poder de Jesús — no con fuerza de voluntad.</p>
+        </div>
+        <div class="lh-mod lh-reveal"><span class="lh-mod-num">05</span>
+          <h3>Construir una herencia nueva</h3>
+          <p>No alcanza con cortar lo malo: vas a diseñar los nuevos hábitos, palabras y acuerdos que van a heredar tus hijos y los hijos de tus hijos.</p>
+        </div>
+        <div class="lh-mod lh-mod-destacado lh-reveal"><span class="lh-mod-num">✝</span>
+          <h3>Y no lo hacés solo</h3>
+          <p>Grupos pequeños, acompañamiento personal y una comunidad que ya pasó por el proceso. Nadie sana en soledad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUIÉN LO DICTA ===== -->
+  <section class="lh-section lh-mentor">
+    <div class="lh-container lh-mentor-grid">
+      <div class="lh-mentor-foto lh-reveal">
+        <img src="img/pastores.jpg" alt="Pastores Alejandro y Mariela Castellazzo" onerror="this.parentElement.classList.add('sin-foto'); this.remove()" />
+        <span class="lh-mentor-emoji">🎓</span>
+      </div>
+      <div class="lh-mentor-info lh-reveal">
+        <span class="lh-tag">Tu guía en el proceso</span>
+        <h2>Pr. Alejandro Castellazzo</h2>
+        <p class="lh-mentor-cred">Licenciado en Psicología Clínica · Teólogo · Coach</p>
+        <p>
+          Más de 27 años acompañando familias en Mendoza. Alejandro une lo que casi nunca va junto:
+          la <strong>profundidad de la Palabra</strong> y las <strong>herramientas de la psicología clínica</strong>.
+          Este curso no es teoría: es el mismo proceso con el que cientos de personas de nuestra
+          comunidad ya identificaron y cortaron sus patrones heredados.
+        </p>
+        <ul class="lh-mentor-lista">
+          <li>✦ Fundador del Ministerio Cristiano Renacer (1997)</li>
+          <li>✦ Director de programas de Sanidad Emocional</li>
+          <li>✦ Junto a Mariela, más de 200 familias impactadas</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIOS / REELS ===== -->
+  <section class="lh-section lh-reels">
+    <div class="lh-container">
+      <div class="lh-section-head lh-reveal">
+        <span class="lh-tag">Historias reales</span>
+        <h2>Ellos ya cortaron el patrón</h2>
+        <p>Miralos contarlo en primera persona.</p>
+      </div>
+
+      <!--
+        REELS: reemplazá cada tarjeta por el embed de tu reel de Instagram
+        (en el reel: ⋯ > Insertar > copiar código) o subí videos verticales a video/testimonio-1.mp4, etc.
+      -->
+      <div class="lh-reels-grid">
+        <figure class="lh-reel lh-reveal">
+          <div class="lh-reel-placeholder"><span>▶</span><p>Pegá acá el embed<br />de tu Reel #1</p></div>
+          <figcaption>"Corté con 3 generaciones de enojo" — Marcos, 34</figcaption>
+        </figure>
+        <figure class="lh-reel lh-reveal">
+          <div class="lh-reel-placeholder"><span>▶</span><p>Pegá acá el embed<br />de tu Reel #2</p></div>
+          <figcaption>"Mi familia nunca hablaba. Hoy abrazo a mi papá" — Carla, 41</figcaption>
+        </figure>
+        <figure class="lh-reel lh-reveal">
+          <div class="lh-reel-placeholder"><span>▶</span><p>Pegá acá el embed<br />de tu Reel #3</p></div>
+          <figcaption>"Entendí por qué repetía lo que juré no repetir" — Damián, 27</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRECIO + FORMULARIO ===== -->
+  <section class="lh-section lh-cierre" id="inscripcion">
+    <div class="lh-container lh-cierre-grid">
+
+      <div class="lh-precio lh-reveal">
+        <span class="lh-tag">Inversión</span>
+        <h2>Reservá tu lugar</h2>
+
+        <!-- Cuenta regresiva: editá la fecha de inicio en data-inicio (formato AAAA-MM-DDTHH:MM:SS) -->
+        <div class="lh-countdown" id="lh-countdown" data-inicio="2026-08-10T19:00:00">
+          <p>El curso comienza en</p>
+          <div class="lh-countdown-nums">
+            <div><strong id="cd-dias">--</strong><small>días</small></div>
+            <div><strong id="cd-horas">--</strong><small>hs</small></div>
+            <div><strong id="cd-min">--</strong><small>min</small></div>
+            <div><strong id="cd-seg">--</strong><small>seg</small></div>
+          </div>
+        </div>
+
+        <div class="lh-precio-card">
+          <!-- ✏️ EDITÁ EL PRECIO ACÁ -->
+          <div class="lh-precio-valor"><span>$</span>25.000<small>ARS</small></div>
+          <p class="lh-precio-nota">Pago único · Cupos limitados</p>
+          <ul class="lh-precio-incluye">
+            <li>✔ 6 encuentros en vivo</li>
+            <li>✔ Cuaderno de trabajo "Mi árbol de patrones"</li>
+            <li>✔ Grupo pequeño de acompañamiento</li>
+            <li>✔ Sesión de ministración personal</li>
+            <li>✔ Acceso a la comunidad Renacer</li>
+          </ul>
+        </div>
+        <p class="lh-precio-garantia">💜 Si después del primer encuentro sentís que no es para vos, te devolvemos el 100%.</p>
+      </div>
+
+      <div class="lh-form-wrap lh-reveal">
+        <h3>Anotate ahora</h3>
+        <p>Completá tus datos y te contactamos por WhatsApp con todos los detalles.</p>
+
+        <form id="lh-form" novalidate>
+          <div class="lh-field">
+            <label for="f-nombre">Nombre</label>
+            <input type="text" id="f-nombre" name="nombre" placeholder="Tu nombre" autocomplete="given-name" maxlength="80" required />
+          </div>
+          <div class="lh-field">
+            <label for="f-apellido">Apellido</label>
+            <input type="text" id="f-apellido" name="apellido" placeholder="Tu apellido" autocomplete="family-name" maxlength="80" required />
+          </div>
+          <div class="lh-field-row">
+            <div class="lh-field">
+              <label for="f-telefono">Teléfono (WhatsApp)</label>
+              <input type="tel" id="f-telefono" name="telefono" placeholder="261 555 5555" autocomplete="tel" maxlength="30" required />
+            </div>
+            <div class="lh-field lh-field-edad">
+              <label for="f-edad">Edad</label>
+              <input type="number" id="f-edad" name="edad" placeholder="30" min="12" max="99" required />
+            </div>
+          </div>
+
+          <!-- Honeypot anti-spam: los humanos no lo ven, los bots lo completan -->
+          <input type="text" name="sitio_web" id="f-sitio-web" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <button type="submit" class="lh-btn lh-btn-primary lh-btn-lg lh-btn-full" id="lh-submit">
+            Quiero mi lugar en el curso →
+          </button>
+          <p class="lh-form-privacidad">🔒 Tus datos están seguros. Solo los usamos para contactarte por el curso.</p>
+          <div class="lh-form-msg" id="lh-form-msg" role="status" aria-live="polite"></div>
+        </form>
+
+        <div class="lh-form-ok" id="lh-form-ok" hidden>
+          <div class="lh-form-ok-icon">🎉</div>
+          <h3>¡Ya tenés tu lugar reservado!</h3>
+          <p>En las próximas horas te escribimos por WhatsApp con todos los detalles del curso.</p>
+          <a class="lh-btn lh-btn-ghost" href="https://wa.me/5492616633864?text=Hola!%20Me%20acabo%20de%20inscribir%20al%20curso%20Sanando%20la%20Herencia" target="_blank" rel="noopener">Escribinos ahora por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER MINI ===== -->
+  <footer class="lh-footer">
+    <img src="img/logo-renacer.png" alt="Ministerio Cristiano Renacer" onerror="this.remove()" />
+    <p>Ministerio Cristiano Renacer · Boulogne Sur Mer 2185, Mendoza, Argentina</p>
+    <p><a href="tel:+5492616633864">+54 9 261 663-3864</a> · <a href="index.html">ministerio renacer</a></p>
+  </footer>
+
+  <!-- Barra CTA fija en mobile -->
+  <div class="lh-sticky-cta" id="lh-sticky-cta">
+    <span>Curso <strong>Sanando la Herencia</strong></span>
+    <a href="#inscripcion" class="lh-btn lh-btn-primary lh-btn-sm">Inscribirme</a>
+  </div>
+
+  <script src="js/herencia.js"></script>
+</body>
+</html>
