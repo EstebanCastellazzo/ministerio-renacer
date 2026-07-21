@@ -31,7 +31,7 @@
         setTimeout(function () { cadena.classList.add('cortada'); }, 600);
         obs.disconnect();
       }
-    }, { threshold: 0.5 }).observe(cadena);
+    }, { threshold: 0.3 }).observe(cadena);
   }
 
   /* --- Test interactivo de patrones --- */
@@ -158,7 +158,7 @@
     if (window.location.protocol === 'file:') {
       mostrarError('Estás abriendo la página como archivo local: el formulario solo funciona subido al hosting (necesita PHP).');
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Quiero mi lugar en el curso →';
+      submitBtn.textContent = 'Quiero mi lugar en el\u00A0curso\u00A0→';
       return;
     }
 
@@ -199,7 +199,7 @@
       })
       .finally(function () {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Quiero mi lugar en el curso →';
+        submitBtn.textContent = 'Quiero mi lugar en el\u00A0curso\u00A0→';
       });
   });
 })();

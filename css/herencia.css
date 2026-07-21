@@ -188,7 +188,7 @@ body.sin-video .lh-hero-media video { display: none; }
 .lh-tachado-linea {
   position: absolute; left: -2%; top: 54%;
   width: 0; height: .07em;
-  background: #000;
+  background: #C2410C;
   border-radius: 4px;
   transform: rotate(-2deg);
   animation: lh-tachar 2.4s var(--ease) 1.4s forwards;
@@ -566,7 +566,7 @@ body.sin-video .lh-hero-media video { display: none; }
     text-decoration-thickness: .07em;
     animation: lh-tachar-mobile 2s linear 1.4s forwards;
   }
-  @keyframes lh-tachar-mobile { to { text-decoration-color: #000; } }
+  @keyframes lh-tachar-mobile { to { text-decoration-color: #C2410C; } }
   .lh-cadena { flex-direction: column; align-items: center; gap: 4px; }
   .lh-link { flex: none; width: 2px; height: 40px; margin: 4px 0; background: repeating-linear-gradient(180deg, var(--gray-400) 0 8px, transparent 8px 14px); }
   .lh-corte { right: 10px; top: 26px; }
@@ -574,4 +574,10 @@ body.sin-video .lh-hero-media video { display: none; }
   .lh-form-wrap { padding: 28px 20px; }
   .lh-field-row { grid-template-columns: 1fr 96px; }
   .lh-topbar .lh-btn { display: none; }
+  /* El boton grande no debe partir la flecha en otro renglon */
+  .lh-btn-lg { font-size: .95rem; padding: 15px 20px; }
+  /* Sin foto del pastor, el bloque placeholder solo ocupa espacio en mobile */
+  .lh-mentor-foto.sin-foto { display: none; }
+  .lh-hero-content h1 { font-size: clamp(2rem, 9vw, 2.6rem); }
+  .lh-section-head h2 { font-size: clamp(1.5rem, 6.5vw, 1.9rem); }
 }
