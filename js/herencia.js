@@ -155,23 +155,47 @@
     submitBtn.disabled = true;
     submitBtn.textContent = 'Enviando...';
 
+    if (window.location.protocol === 'file:') {
+      mostrarError('Estás abriendo la página como archivo local: el formulario solo funciona subido al hosting (necesita PHP).');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Quiero mi lugar en el curso →';
+      return;
+    }
+
     fetch('inscripcion.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(datos)
     })
-      .then(function (res) { return res.json(); })
-      .then(function (data) {
-        if (data && data.ok) {
-          form.hidden = true;
-          formOk.hidden = false;
-          formOk.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        } else {
-          mostrarError((data && data.error) || 'No pudimos guardar tu inscripción. Intentá de nuevo.');
-        }
+      .then(function (res) {
+        return res.text().then(function (texto) {
+          var data = null;
+          try { data = JSON.parse(texto); } catch (e) { /* respuesta no-JSON: la diagnosticamos abajo */ }
+
+          if (data && data.ok) {
+            form.hidden = true;
+            formOk.hidden = false;
+            formOk.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            return;
+          }
+          if (data && data.error) {
+            mostrarError(data.error);
+            return;
+          }
+          // Respuesta que no es JSON: diagnóstico según el caso
+          console.error('Respuesta de inscripcion.php (HTTP ' + res.status + '):', texto.slice(0, 500));
+          if (res.status === 404) {
+            mostrarError('No se encuentra inscripcion.php en el servidor. Verificá que esté subido en la misma carpeta que esta página.');
+          } else if (texto.indexOf('<?php') !== -1) {
+            mostrarError('El servidor no está ejecutando PHP. Verificá que el hosting tenga PHP habilitado.');
+          } else {
+            mostrarError('El servidor respondió con un error (HTTP ' + res.status + '). Revisá la consola del navegador (F12) para ver el detalle.');
+          }
+        });
       })
-      .catch(function () {
-        mostrarError('Hubo un problema de conexión. Intentá de nuevo o escribinos por WhatsApp.');
+      .catch(function (err) {
+        console.error('Error de red al enviar la inscripción:', err);
+        mostrarError('No hubo respuesta del servidor. Verificá tu conexión o escribinos por WhatsApp.');
       })
       .finally(function () {
         submitBtn.disabled = false;
