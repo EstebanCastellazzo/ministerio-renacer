@@ -188,7 +188,7 @@ body.sin-video .lh-hero-media video { display: none; }
 .lh-tachado-linea {
   position: absolute; left: -2%; top: 54%;
   width: 0; height: .07em;
-  background: var(--secondary);
+  background: #000;
   border-radius: 4px;
   transform: rotate(-2deg);
   animation: lh-tachar 2.4s var(--ease) 1.4s forwards;
@@ -566,7 +566,7 @@ body.sin-video .lh-hero-media video { display: none; }
     text-decoration-thickness: .07em;
     animation: lh-tachar-mobile 2s linear 1.4s forwards;
   }
-  @keyframes lh-tachar-mobile { to { text-decoration-color: var(--secondary); } }
+  @keyframes lh-tachar-mobile { to { text-decoration-color: #000; } }
   .lh-cadena { flex-direction: column; align-items: center; gap: 4px; }
   .lh-link { flex: none; width: 2px; height: 40px; margin: 4px 0; background: repeating-linear-gradient(180deg, var(--gray-400) 0 8px, transparent 8px 14px); }
   .lh-corte { right: 10px; top: 26px; }
