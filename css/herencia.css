@@ -187,11 +187,11 @@ body.sin-video .lh-hero-media video { display: none; }
 .lh-tachado { position: relative; display: inline-block; color: var(--secondary-light); }
 .lh-tachado-linea {
   position: absolute; left: -2%; top: 54%;
-  width: 0; height: .09em;
-  background: var(--secondary);
+  width: 0; height: .045em;
+  background: #000;
   border-radius: 4px;
   transform: rotate(-2deg);
-  animation: lh-tachar 1s var(--ease) 1.4s forwards;
+  animation: lh-tachar 2.4s var(--ease) 1.4s forwards;
 }
 @keyframes lh-tachar { to { width: 104%; } }
 
@@ -563,10 +563,10 @@ body.sin-video .lh-hero-media video { display: none; }
   .lh-tachado {
     text-decoration: line-through;
     text-decoration-color: transparent;
-    text-decoration-thickness: .09em;
-    animation: lh-tachar-mobile .1s linear 1.4s forwards;
+    text-decoration-thickness: .05em;
+    animation: lh-tachar-mobile 2s linear 1.4s forwards;
   }
-  @keyframes lh-tachar-mobile { to { text-decoration-color: var(--secondary); } }
+  @keyframes lh-tachar-mobile { to { text-decoration-color: #000; } }
   .lh-cadena { flex-direction: column; align-items: center; gap: 4px; }
   .lh-link { flex: none; width: 2px; height: 40px; margin: 4px 0; background: repeating-linear-gradient(180deg, var(--gray-400) 0 8px, transparent 8px 14px); }
   .lh-corte { right: 10px; top: 26px; }
