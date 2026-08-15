@@ -8,19 +8,30 @@
   var portada = document.getElementById('av-portada');
   var portadaImg = document.getElementById('av-portada-img');
   if (portada && portadaImg) {
-    var candidatos = [
-      'img/portada-anatomia.jpg', 'img/portada-anatomia.jpeg', 'img/portada-anatomia.png', 'img/portada-anatomia.webp',
-      'img/portada-anatomia.JPG', 'img/portada-anatomia.JPEG', 'img/portada-anatomia.PNG',
-      'img/Portada-Anatomia.jpg', 'img/anatomia.jpg', 'img/anatomia.png'
-    ];
+    // Busca la portada en la carpeta img/ y también en la raíz del sitio,
+    // probando las extensiones y capitalizaciones más habituales.
+    var carpetas = ['img/', '', 'imagenes/', 'images/'];
+    var nombres = ['portada-anatomia', 'Portada-Anatomia', 'portada_anatomia', 'anatomia'];
+    var extensiones = ['.jpg', '.jpeg', '.png', '.webp', '.JPG', '.PNG'];
+    var candidatos = [];
+    carpetas.forEach(function (carpeta) {
+      nombres.forEach(function (nombre) {
+        extensiones.forEach(function (ext) { candidatos.push(carpeta + nombre + ext); });
+      });
+    });
+
     var probar = function (i) {
       if (i >= candidatos.length) {
+        console.warn('No se encontró la portada. Subila como img/portada-anatomia.jpg (o revisá el nombre del archivo).');
         portada.classList.add('sin-portada');
         portadaImg.remove();
         return;
       }
       var test = new Image();
-      test.onload = function () { portadaImg.src = candidatos[i]; portadaImg.hidden = false; };
+      test.onload = function () {
+        portadaImg.src = candidatos[i];
+        portadaImg.hidden = false;
+      };
       test.onerror = function () { probar(i + 1); };
       test.src = candidatos[i];
     };
