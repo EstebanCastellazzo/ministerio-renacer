@@ -27,9 +27,10 @@
     </header>
 
     <div class="av-hero-grid">
-      <!-- Portada del libro: subí la imagen a img/portada-anatomia.jpg -->
-      <div class="av-portada av-reveal">
-        <img src="img/portada-anatomia.jpg" alt="Portada del libro Anatomía de un Cambio Verdadero" onerror="this.parentElement.classList.add('sin-portada'); this.remove()" />
+      <!-- Portada del libro: subí la imagen a img/portada-anatomia.jpg
+           (también acepta .jpeg, .png o .webp, con mayúsculas o minúsculas) -->
+      <div class="av-portada av-reveal" id="av-portada">
+        <img id="av-portada-img" alt="Portada del libro Anatomía de un Cambio Verdadero" hidden />
         <div class="av-portada-mock" aria-hidden="true">
           <span class="av-mock-sobre">Un camino de sanidad, identidad y propósito</span>
           <strong class="av-mock-titulo">ANATOMÍA<br />DE UN<br />CAMBIO</strong>
@@ -142,7 +143,7 @@
 
       <div class="av-comprar-card av-reveal">
         <!-- ✏️ EDITAR PRECIO ACÁ -->
-        <div class="av-precio"><span>$</span>15.000<small>ARS</small></div>
+        <div class="av-precio"><span>$</span>9.900<small>ARS</small></div>
         <p class="av-precio-nota">Pago único · Descarga digital</p>
 
         <!--
@@ -172,6 +173,6 @@
     <a href="#comprar" class="av-btn av-btn-primary av-btn-sm">Quiero el libro</a>
   </div>
 
-  <script src="js/anatomia.js?v=1"></script>
+  <script src="js/anatomia.js?v=2"></script>
 </body>
 </html>

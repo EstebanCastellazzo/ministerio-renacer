@@ -4,6 +4,29 @@
 (function () {
   'use strict';
 
+  /* --- Portada del libro: prueba varios nombres de archivo posibles --- */
+  var portada = document.getElementById('av-portada');
+  var portadaImg = document.getElementById('av-portada-img');
+  if (portada && portadaImg) {
+    var candidatos = [
+      'img/portada-anatomia.jpg', 'img/portada-anatomia.jpeg', 'img/portada-anatomia.png', 'img/portada-anatomia.webp',
+      'img/portada-anatomia.JPG', 'img/portada-anatomia.JPEG', 'img/portada-anatomia.PNG',
+      'img/Portada-Anatomia.jpg', 'img/anatomia.jpg', 'img/anatomia.png'
+    ];
+    var probar = function (i) {
+      if (i >= candidatos.length) {
+        portada.classList.add('sin-portada');
+        portadaImg.remove();
+        return;
+      }
+      var test = new Image();
+      test.onload = function () { portadaImg.src = candidatos[i]; portadaImg.hidden = false; };
+      test.onerror = function () { probar(i + 1); };
+      test.src = candidatos[i];
+    };
+    probar(0);
+  }
+
   /* --- Reveal on scroll --- */
   var revealObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
