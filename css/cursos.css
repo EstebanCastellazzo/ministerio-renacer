@@ -522,3 +522,68 @@
     padding: 24px;
   }
 }
+/* === CURSOS DESTACADOS (landings propias) === */
+.cursos-destacados {
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+.destacados-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.destacado-card {
+  display: block;
+  border-radius: var(--radius-lg);
+  padding: 34px 30px;
+  color: #fff;
+  transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+.destacado-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.destacado-herencia {
+  background: linear-gradient(135deg, #1A1A2E 0%, #3b2170 100%);
+  border: 1px solid rgba(124, 58, 237, .5);
+}
+.destacado-anatomia {
+  background: linear-gradient(135deg, #241812 0%, #6b3410 100%);
+  border: 1px solid rgba(245, 158, 11, .5);
+}
+
+.destacado-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--secondary-light);
+  background: rgba(255, 255, 255, .1);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+}
+
+.destacado-card h3 {
+  color: #fff;
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+}
+
+.destacado-card p {
+  color: rgba(255, 255, 255, .75);
+  font-size: .95rem;
+  margin-bottom: 18px;
+}
+
+.destacado-link {
+  font-weight: 700;
+  font-size: .95rem;
+  color: var(--secondary-light);
+}
